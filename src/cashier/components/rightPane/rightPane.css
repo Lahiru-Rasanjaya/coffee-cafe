@@ -1,5 +1,8 @@
 .leftPane-container{
-    flex: 2;
+    flex: 3;
+   
+}
+.background{
     margin: 2rem;
     padding: 16px;
     background-color: #C3600A;

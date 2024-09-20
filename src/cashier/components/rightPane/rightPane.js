@@ -6,6 +6,7 @@ import Total from "./total/total";
 export default function leftpane() {
   return (
     <div className="leftPane-container">
+      <div className="background">
       <div className="AddItems">
         <AddItems />
         <AddItems />
@@ -15,6 +16,7 @@ export default function leftpane() {
       <hr />
       <div className="total">
         <Total />
+      </div>
       </div>
     </div>
   );
