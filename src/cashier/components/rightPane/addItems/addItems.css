@@ -1,0 +1,39 @@
+.addItem-container{
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+.namePrice{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+.plusAndMinus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D9D9D9;
+    padding: 5px;
+    border-radius: 10px;
+}
+.ItemNumber{
+    width: 32px;
+    outline: none;
+    margin: 0 10px;
+}
+.delete button{
+    border: none;
+    background-color: white;
+}
+.plusAndMinus button{
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 50%;
+}
+table{
+    width: 100%;
+}

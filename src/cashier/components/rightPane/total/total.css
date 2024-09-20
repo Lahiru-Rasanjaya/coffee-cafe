@@ -1,0 +1,29 @@
+.itemTotal{
+    margin-top: 10px;
+    text-align: center;
+}
+.DisplayTotal{
+    text-align: right;
+}
+.DisplayTotal input{
+    background-color: #FCBA81;
+    border: none;
+    border-radius: 5px;
+    height: 2rem;
+    outline: none;
+    padding-left: 16px;
+}
+.oder{
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    width: 90%;
+    height: 3rem;
+    background-color: #101010;
+    color: white;
+    margin-top: 10px;
+}
+.oder:hover{
+    background-color: #181818;
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.leftPane-container{
+    flex: 2;
+    margin: 2rem;
+    padding: 16px;
+    background-color: #C3600A;
+    border-radius: 15px;
+}
+hr{
+    margin-top: 10px;
+}
