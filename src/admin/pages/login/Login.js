@@ -1,4 +1,3 @@
-import './login.css';
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -24,7 +23,7 @@ export default function Login() {
     
             if (result.success) {
               localStorage.setItem('isLoggedIn', true);
-              navigate('/home');
+              navigate('/AdminHome');
             } else {
                 setErrorMessage('Invalid email/password');
             }
@@ -39,7 +38,7 @@ export default function Login() {
         <div className="login-container">
             <form action="" className="LoginForm">
                 <div className="welcomeText">
-                    Welcome to <span>Coffee Cafe</span> POS System
+                     Add New <span>Coffee</span> Items
                 </div>
             <div className="image-loginForm">
                 <div className="coffeeImage">

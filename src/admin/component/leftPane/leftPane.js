@@ -1,6 +1,5 @@
 import React from 'react'
-import './leftPane.css'
-import Item from './Item/item'
+import Item from './item/Item'
 
 export default function rightPane() {
   return (

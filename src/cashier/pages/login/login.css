@@ -38,7 +38,7 @@ table {
   text-align: left;
   font-size: 16px;
 }
-table input {
+table .input{
   margin-left: 16px;
   margin-top: 10px;
   width: 250px;
@@ -61,4 +61,12 @@ table input {
 }
 .submitButton:hover {
   background-color: #1d1010;
+}
+
+.errorMassage{
+  background-color: rgb(167, 0, 0);
+  color: white;
+  padding: 1px 0;
+  font-weight: 300;
+  font-size: 15px;
 }

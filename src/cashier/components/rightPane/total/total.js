@@ -6,16 +6,14 @@ export default function total() {
     <div className="itemTotal">
          <div className="addItem-container">
         <table>
-        <tr>
+        <tr className='tableAlign'>
           <td>
             <div className="namePrice">
               <span className="name">Total</span>
             </div>
           </td>
           <td className="DisplayTotal">
-            <div>
-              <input type="text" className="displyTotal" />
-            </div>
+              <span>RS.&nbsp;</span> <input type="text" className="displyTotals" />
           </td>
         </tr>
       </table>

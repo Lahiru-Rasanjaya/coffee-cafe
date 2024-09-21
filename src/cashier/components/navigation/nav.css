@@ -27,15 +27,11 @@ nav button {
   position: absolute;
   right: 0;
   margin-right: 1rem;
-  background-color: #cb5e00;
+  background-color: #964601;
   height: 40px;
   padding: 0 16px;
   border: none;
   outline: none;
   border-radius: 5px;
   color: white;
-}
-nav button:hover {
-  background-color: #964601;
-  cursor: pointer;
 }

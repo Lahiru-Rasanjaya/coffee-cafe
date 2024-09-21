@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios"; 
-import "./item.css";
+import './Item.css'
 
 export default function Item() {
   const [items, setItems] = useState([]);
@@ -35,8 +35,9 @@ export default function Item() {
                   Rs:<span className="priceLeft">{item.itemPrice}</span>
                 </span>
               </div>
-              <div className="Addbutton">
-                <button className="add">Add</button>
+              <div className="Addbuttons">
+                <button className="addbutton">Edit</button>
+                <button className="DeleteButton">Delete</button>
               </div>
             </div>
           </div>

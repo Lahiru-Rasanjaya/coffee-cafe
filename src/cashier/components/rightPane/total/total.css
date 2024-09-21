@@ -1,29 +1,38 @@
-.itemTotal{
-    margin-top: 10px;
-    text-align: center;
+.itemTotal {
+  margin-top: 10px;
+  text-align: center;
 }
-.DisplayTotal{
-    text-align: right;
+.DisplayTotal {
+  display: flex;
+  align-items: center;
+  margin-left: 1.8rem;
 }
-.DisplayTotal input{
-    background-color: #FCBA81;
-    border: none;
-    border-radius: 5px;
-    height: 2rem;
-    outline: none;
-    padding-left: 16px;
+.displyTotals {
+  background-color: #fcba81;
+  border-radius: 5px;
+  height: 3rem;
+  border: none;
+  outline: none;
+  width: 220px;
+  font-size: 18px;
+  padding-left: 16px;
 }
-.oder{
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    width: 90%;
-    height: 3rem;
-    background-color: #101010;
-    color: white;
-    margin-top: 10px;
+.oder {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  width: 90%;
+  height: 3rem;
+  background-color: #101010;
+  color: white;
+  margin-top: 10px;
 }
-.oder:hover{
-    background-color: #181818;
-    cursor: pointer;
+.oder:hover {
+  background-color: #181818;
+  cursor: pointer;
+}
+.tableAlign {
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
