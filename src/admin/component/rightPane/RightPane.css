@@ -1,0 +1,9 @@
+.leftPane-containers{
+    flex: 3;
+}
+.backgrounds{
+    margin: 2rem;
+    padding: 16px;
+    background-color: #C3600A;
+    border-radius: 15px;
+}

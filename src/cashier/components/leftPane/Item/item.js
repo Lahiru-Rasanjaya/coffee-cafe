@@ -19,7 +19,7 @@ export default function Item() {
       .catch((error) => {
         console.error("Error fetching items:", error);
       });
-  },);
+  }, []);
 
   return (
     <div className="main">

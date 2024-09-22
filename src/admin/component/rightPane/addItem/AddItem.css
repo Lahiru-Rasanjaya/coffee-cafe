@@ -1,0 +1,70 @@
+.addItem-containers{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #c3600a;
+  color: rgb(0, 0, 0);
+}
+
+.ItemInputBox {
+  height: 2.5rem;
+  width: 200px;
+  border: none;
+  outline: none;
+  padding-left: 16px;
+  font-size: 14px;
+  background-color: #944908;
+  color: white;
+}
+.ItemInputBox::placeholder{
+    color: #ffffff;
+}
+
+.file{
+    margin-right:-10rem;
+}
+.ItemNames{
+    font-size: 14px;
+}
+.addItems button{
+    background-color: #000000;
+    color: white;
+    height: 3rem;
+    width: 350px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 16px;
+}
+.addItems button:hover{
+    background-color: #0f0f0f;
+    cursor: pointer;
+}
+.topic{
+    color: white;
+    margin-bottom: 16px;
+    font-size: 20px;
+}
+.ItemNameAndInputBox{
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 16px;
+}
+.tables{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.fileAndName{
+    display: flex;
+    align-items: center;
+}
+.file{
+    background-color: #944908;
+    width: 205px;
+    padding: 10px;
+    color: white;
+}
+
+
+
