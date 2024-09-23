@@ -1,0 +1,39 @@
+.backImage {
+  display: flex;
+  flex-direction: column;
+}
+.mainUpdate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+}
+.Update-containers {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #944908;
+  padding: 2rem;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 30px;
+
+  overflow: hidden;
+}
+.topics {
+  color: white;
+  font-size: 1.5em;
+  margin-bottom: 1rem;
+}
+.close {
+  display: flex;
+  margin-left: 18.1rem;
+}
+.closebutton {
+  background-color: #944908;
+  color: white;
+  padding: 8px 58px 5px 58px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 50px;
+  cursor: pointer;
+}

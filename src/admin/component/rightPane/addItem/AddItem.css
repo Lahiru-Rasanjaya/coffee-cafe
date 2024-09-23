@@ -19,7 +19,6 @@
 .ItemInputBox::placeholder{
     color: #ffffff;
 }
-
 .file{
     margin-right:-10rem;
 }
@@ -37,7 +36,7 @@
     margin-top: 16px;
 }
 .addItems button:hover{
-    background-color: #0f0f0f;
+    background-color: #0e0e0e;
     cursor: pointer;
 }
 .topic{

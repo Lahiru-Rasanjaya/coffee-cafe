@@ -4,6 +4,9 @@ import App from './App';
 import Login from './cashier/pages/login/login';
 import AdminLogin from './admin/pages/login/Login';
 import AdminHome from './admin/pages/home/Home';
+import AddItem from './admin/component/rightPane/addItem/AddItem';
+import UpadatePage from './admin/component/leftPane/item/update/UpdatePage/UpadatePage';
+import DeletePage from './admin/component/leftPane/item/Delete/DeletePage/DeletePage';
 
 
 import {
@@ -27,6 +30,18 @@ const router = createBrowserRouter([
   {
     path: "/AdminHome",
     element: <AdminHome />,
+  },
+  {
+    path: "/AddItem",
+    element: <AddItem />,
+  },
+  {
+    path: "/Update",
+    element: <UpadatePage />,
+  },
+  {
+    path: "/Delete",
+    element: <DeletePage />,
   },
 ]);
 

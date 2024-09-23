@@ -32,7 +32,7 @@ export default function Item() {
               <div className="namAndPrice">
                 <span className="name">{item.itemName}</span>
                 <span className="price">
-                  Rs:<span className="priceLeft">{item.itemPrice}</span>
+                  Rs. <span className="priceLeft">{item.itemPrice}</span>
                 </span>
               </div>
               <div className="Addbutton">

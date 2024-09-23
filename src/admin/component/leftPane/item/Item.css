@@ -1,32 +1,32 @@
-.Addbuttons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 4px;
-    margin-bottom: 4px;
+.Addbuttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 4px;
+  margin-bottom: 4px;
 }
-.addbutton{
-    flex: 5;
-    background-color: #219903;
-    border: none;
-    outline: none;
-    height: 32px;
-    color: white;
+.addbutton {
+  flex: 5;
+  background-color: #219903;
+  border: none;
+  outline: none;
+  height: 32px;
+  color: white;
 }
-.addbutton:hover{
-    background-color: #166901;
-    cursor: pointer;
+.addbutton:hover {
+  background-color: #166901;
+  cursor: pointer;
 }
-.DeleteButton{
-    flex: 5;
-    background-color: #990303;
-    border: none;
-    outline: none;
-    height: 32px;
-    color: white;
+.DeleteButton {
+  flex: 5;
+  background-color: #990303;
+  border: none;
+  outline: none;
+  height: 32px;
+  color: white;
 }
-.DeleteButton:hover{
-    background-color: #750000;
-    cursor: pointer;
+.DeleteButton:hover {
+  background-color: #750000;
+  cursor: pointer;
 }
