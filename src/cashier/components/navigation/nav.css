@@ -23,12 +23,14 @@ nav a {
 nav a:hover{
     color: #cb5e00;
 }
-nav button {
+nav .sales{
   position: absolute;
   right: 0;
   margin-right: 1rem;
-  background-color: #d16200;
-  height: 35px;
+}
+nav button {
+  background-color: #e76c00;
+  height: 30px;
   padding: 0 16px;
   border: none;
   outline: none;

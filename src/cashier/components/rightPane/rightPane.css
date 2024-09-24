@@ -1,7 +1,11 @@
 .leftPane-container{
     flex: 3;
+    position: sticky;
+    height: calc(100vh - 68px);
+    overflow-y: scroll;
 }
-.background{
+
+.background{ 
     margin: 2rem;
     padding: 16px;
     background-color: #C3600A;
@@ -9,4 +13,8 @@
 }
 hr{
     margin-top: 10px;
+}
+.AddItems{
+    display: flex;
+    flex-direction: column;
 }

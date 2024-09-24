@@ -7,6 +7,7 @@ import AdminHome from './admin/pages/home/Home';
 import AddItem from './admin/component/rightPane/addItem/AddItem';
 import UpadatePage from './admin/component/leftPane/item/update/UpdatePage/UpadatePage';
 import DeletePage from './admin/component/leftPane/item/Delete/DeletePage/DeletePage';
+import AddItems from './cashier/components/rightPane/addItems/addItems';
 
 
 import {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
   {
     path: "/Delete",
     element: <DeletePage />,
+  },
+  {
+    path: "/AddItems",
+    element: <AddItems />,
   },
 ]);
 

@@ -1,39 +1,91 @@
-.addItem-container{
+.addItem-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 5px;
+  text-align: center;
+}
+
+.namePrice {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.plusAndMinus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  padding: 5px;
+  border-radius: 10px;
+}
+.ItemNumber {
+  width: 32px;
+  outline: none;
+  margin: 0 10px;
+}
+.delete button {
+  border: none;
+  background-color: white;
+}
+.plusAndMinus button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+}
+table {
+  width: 100%;
+}
+.colour {
+  color: black;
+  font-weight: 500;
+}
+.ItemNumber {
+  width: 50px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.orderSummary {
+  margin-top: 10px;
+  font-weight: bold;
+}
+.amount{
     display: flex;
+    flex-direction: row;
     align-items: center;
-    background-color: #FFFFFF;
-    border-radius: 15px;
-    padding: 5px;
-    margin-bottom: 5px;
 }
-.namePrice{
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-}
-.plusAndMinus{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #D9D9D9;
-    padding: 5px;
-    border-radius: 10px;
-}
-.ItemNumber{
-    width: 32px;
+.amount input{
+    background-color: #A2F994;
+    border-radius: 5px;
+    height: 3rem;
+    border: none;
     outline: none;
-    margin: 0 10px;
+    width: 180px;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 16px;
+    margin-left: 0.5rem;
 }
-.delete button{
+.Balance{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Balance input{
+    background-color: #FC8E8E;
+    border-radius: 5px;
+    height: 3rem;
     border: none;
-    background-color: white;
-}
-.plusAndMinus button{
-    background-color: #000000;
-    color: white;
-    border: none;
-    border-radius: 50%;
-}
-table{
-    width: 100%;
+    outline: none;
+    width: 180px;
+    font-size: 22px;
+    text-align: right;
+    padding-right: 16px;
+    margin-left: 0.5rem;
 }

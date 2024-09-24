@@ -5,7 +5,8 @@
 .DisplayTotal {
   display: flex;
   align-items: center;
-  margin-left: 1.8rem;
+  margin-left: 2.8rem;
+  font-size: 20px;
 }
 .displyTotals {
   background-color: #fcba81;
@@ -13,9 +14,11 @@
   height: 3rem;
   border: none;
   outline: none;
-  width: 220px;
-  font-size: 18px;
-  padding-left: 16px;
+  width: 180px;
+  font-size: 22px;
+  text-align: right;
+  padding-right: 16px;
+  margin-left: 0.5rem;
 }
 .oder {
   border: none;
@@ -35,4 +38,9 @@
   display: flex;
   align-items: center;
   text-align: center;
+}
+.Totalcolour{
+  color: black;
+  font-size: 1.2rem;
+  margin-top: -4px;
 }
