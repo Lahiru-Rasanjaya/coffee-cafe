@@ -6,9 +6,9 @@ export default function nav() {
     <div className="nav-Container">
         <nav>
             <span>Coffee Coafe</span>
-            <button className="addNewItems sales">CASHIER</button>
+            <button className="addNewItems sales">SALES REPORT</button>
+            <a href="/Home"> CASHIER</a>
             <a href="/AdminLogin">+ Add New Items</a>
-            <a href="/sales">SALES REPORT</a>
         </nav>
     </div>
   )

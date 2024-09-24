@@ -8,6 +8,7 @@ import AddItem from './admin/component/rightPane/addItem/AddItem';
 import UpadatePage from './admin/component/leftPane/item/update/UpdatePage/UpadatePage';
 import DeletePage from './admin/component/leftPane/item/Delete/DeletePage/DeletePage';
 import AddItems from './cashier/components/rightPane/addItems/addItems';
+import Sales from './Sales Report/sales';
 
 
 import {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
   {
     path: "/AddItems",
     element: <AddItems />,
+  },
+  {
+    path: "/sales",
+    element: <Sales />,
   },
 ]);
 

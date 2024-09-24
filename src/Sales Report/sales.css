@@ -1,0 +1,116 @@
+.Salescontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px 100px;
+    width: 100%;
+}
+.SalesDateAndPric{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+.searchBoder{
+    padding: 20px 4rem 0 4rem;
+    border: 1px solid rgb(255, 115, 0);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+
+}
+.enterDetails{
+    display: flex;
+    align-items: center;
+}
+.sales-header {
+    text-align: center;
+    color: #343a40;
+    margin-top: 4rem;
+    margin-bottom: 20px;
+}
+
+.itemName-Price,
+.itemDate {
+    margin-bottom: 15px;
+}
+
+.item-label {
+    display: flex;
+    width: 100%;
+    color: #495057;
+}
+
+.input-text {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.input-text:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.searchButton{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.search-button {
+    padding: 10px 150px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+.sales-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    width: 80%;
+}
+.sales-table td{
+    padding-left: 8px;
+}
+
+.table-header {
+    background-color: #007bff;
+    color: white;
+}
+
+.table-header th,
+.table-row td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+
+.table-row:hover {
+    background-color: #f1f1f1;
+}
+
+.table-footer {
+    font-weight: bold;
+    background-color: #f8f9fa;
+}
+
+.table-footer td {
+    border-top: 2px solid #007bff;
+}
+.salesHr{
+    color: black;
+}

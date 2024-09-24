@@ -1,0 +1,31 @@
+
+-- Create the `item` table
+CREATE TABLE item (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    itemName VARCHAR(100) NOT NULL,
+    itemPrice DECIMAL(10,2) NOT NULL,
+    itemImage LONGBLOB
+);
+
+-- Create the `bills` table
+CREATE TABLE bills (
+    bill_id INT AUTO_INCREMENT PRIMARY KEY,
+    total_amount DECIMAL(10,2) NOT NULL,
+    bill_date DATE NOT NULL,
+    bill_time TIME NOT NULL
+);
+
+-- Create the `bill_items` table with foreign keys referencing `item` and `bills` tables
+CREATE TABLE bill_items (
+    item_id INT AUTO_INCREMENT PRIMARY KEY,
+    bill_id INT NOT NULL,
+    item_name VARCHAR(100) NOT NULL,
+    item_price DECIMAL(10,2) NOT NULL,
+    item_quantity INT NOT NULL,
+
+    -- Foreign key to `item` table
+    FOREIGN KEY (item_id) REFERENCES item(id) ON DELETE CASCADE,
+
+    -- Foreign key to `bills` table
+    FOREIGN KEY (bill_id) REFERENCES bills(bill_id) ON DELETE CASCADE
+);

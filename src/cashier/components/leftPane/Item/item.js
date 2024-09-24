@@ -1,4 +1,3 @@
-// Item.js
 import React, { useState, useEffect } from "react";
 import axios from "axios"; 
 import "./item.css";
@@ -6,6 +5,7 @@ import eventBus from "./eventBus";
 
 export default function Item() {
   const [items, setItems] = useState([]);
+  const [addedItemId, setAddedItemId] = useState(null); // State to track the added item ID
 
   useEffect(() => {
     axios
@@ -23,16 +23,17 @@ export default function Item() {
       });
   }, []);
 
-  const handleAddItem = (itemName, itemPrice, event) => {
+  const handleAddItem = (itemId, itemName, itemPrice, event) => {
     event.preventDefault(); 
     eventBus.emit('dataChanged', { name: itemName, price: itemPrice }); 
+    setAddedItemId(itemId); // Set the added item ID
   };
 
   return (
     <div className="main">
       {items.length > 0 ? (
         items.map((item) => (
-          <div className="item-container" key={item.id} >
+          <div className={`item-container ${addedItemId === item.id ? 'added' : ''}`} key={item.id} >
             <img src={item.itemImage} alt="latte-image" />
             <div className="item"> 
               <div className="item-content">
@@ -43,7 +44,7 @@ export default function Item() {
                   </span>
                 </div>
                 <div className="Addbutton">
-                  <button className="add" onClick={(e) => handleAddItem(item.itemName, item.itemPrice, e)}>Add</button>
+                  <button className="add" onClick={(e) => handleAddItem(item.id, item.itemName, item.itemPrice, e)}>Add</button>
                 </div>
               </div>
             </div>
