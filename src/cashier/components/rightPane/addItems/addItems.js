@@ -201,7 +201,7 @@ export default function AddItems() {
               )}
 
               {showAmountBalance && (
-                <button className="oder" onClick={handleGenerateBill}>Generate Bill</button>
+                <button className="oder" onClick={handleGenerateBill}  disabled={items.length === 0} >Generate Bill</button>
               )}
             </div>
           </div>
