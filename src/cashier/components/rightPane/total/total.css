@@ -4,13 +4,13 @@
 }
 .DisplayTotal {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
   margin-left: 5.3rem;
   font-size: 20px;
 }
 .displyTotals {
-  background-color: #fcba81;
-  border-radius: 5px;
+  background-color: #FCBA81;
   height: 3rem;
   border: none;
   outline: none;

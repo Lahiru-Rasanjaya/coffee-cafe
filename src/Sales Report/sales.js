@@ -3,13 +3,13 @@ import "./sales.css";
 import Nav from './components/navigation/nav'
 
 export default function Sales() {
-  const [itemName, setItemName] = useState(""); // State to store the inputted item name
-  const [month, setMonth] = useState(""); // State to store the inputted month
-  const [year, setYear] = useState(""); // State to store the inputted year
-  const [day, setDay] = useState(""); // State to store the inputted day
-  const [salesData, setSalesData] = useState([]); // State to store fetched sales data
+  const [itemName, setItemName] = useState(""); 
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState(""); 
+  const [day, setDay] = useState(""); 
+  const [salesData, setSalesData] = useState([]); 
 
-  // Fetch sales data from the backend API
+
   const fetchSalesData = useCallback(() => {
     let query = `http://localhost/egaleeyesstore/Billinsert/salesReport.php`;
     const params = new URLSearchParams();
@@ -27,28 +27,28 @@ export default function Sales() {
       params.append("day", day);
     }
 
-    query += `?${params.toString()}`; // Add query parameters to the URL
+    query += `?${params.toString()}`; 
 
     fetch(query)
       .then((response) => response.json())
       .then((data) => {
-        // Convert item_price and item_quantity to numbers if they're strings
+      
         const formattedData = data.map(sale => ({
           ...sale,
           item_price: Number(sale.item_price),
           item_quantity: Number(sale.item_quantity)
         }));
-        setSalesData(formattedData); // Store fetched data
+        setSalesData(formattedData); 
       })
       .catch((error) => {
         console.error("Error fetching sales data:", error);
       });
-  }, [itemName, month, year, day]); // Add dependencies for itemName, month, year, and day
+  }, [itemName, month, year, day]); 
 
-  // Fetch data immediately when the component mounts
+ 
   useEffect(() => {
-    fetchSalesData(); // Call to fetch sales data on component mount
-  }, [fetchSalesData]); // Add fetchSalesData to the dependency array
+    fetchSalesData(); 
+  }, [fetchSalesData]); 
 
   return (
     <div>
@@ -66,7 +66,7 @@ export default function Sales() {
                 placeholder="(e.g., Latte)"
                 className="input-text"
                 value={itemName}
-                onChange={(e) => setItemName(e.target.value)} // Update state on input change
+                onChange={(e) => setItemName(e.target.value)} 
               />
             </div>
             <div className="itemDate enterDetails">
@@ -76,7 +76,7 @@ export default function Sales() {
                 className="input-text"
                 placeholder="(e.g., 2024)"
                 value={year}
-                onChange={(e) => setYear(e.target.value)} // Update state on input change
+                onChange={(e) => setYear(e.target.value)}
               />
             </div>
             <div className="itemDate enterDetails">
@@ -86,7 +86,7 @@ export default function Sales() {
                 className="input-text"
                 placeholder="(e.g., 09)"
                 value={month}
-                onChange={(e) => setMonth(e.target.value)} // Update state on input change
+                onChange={(e) => setMonth(e.target.value)} 
               />
             </div>
             <div className="itemDate enterDetails">
@@ -96,7 +96,7 @@ export default function Sales() {
                 className="input-text"
                 placeholder="(e.g., 08)"
                 value={day}
-                onChange={(e) => setDay(e.target.value)} // Update state on input change
+                onChange={(e) => setDay(e.target.value)} 
               />
             </div>            
           </div>

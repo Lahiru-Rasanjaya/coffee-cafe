@@ -14,6 +14,9 @@
   height: 160px;
   border-radius: 15px;
   position: absolute;
+  -webkit-box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
 }
 .item {
   background-color: #38220f;
@@ -22,6 +25,9 @@
   border-radius: 15px;
   margin-top: 2rem;
   overflow: hidden;
+  -webkit-box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
 }
 .item-content {
   display: flex;

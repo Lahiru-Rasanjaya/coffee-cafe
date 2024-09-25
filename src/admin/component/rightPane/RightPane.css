@@ -6,4 +6,7 @@
     padding: 16px;
     background-color: #C3600A;
     border-radius: 15px;
+    -webkit-box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 4px 13px -3px rgba(0, 0, 0, 0.75);
 }

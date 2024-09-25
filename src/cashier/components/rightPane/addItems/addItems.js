@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios"; // Import axios for API calls
+import axios from "axios";
 import "./addItems.css";
 import DeleteIcon from "@mui/icons-material/Delete";
 import eventBus from "../../leftPane/Item/eventBus"; 
@@ -78,7 +78,7 @@ export default function AddItems() {
     setShowAmountBalance(false);
   };
 
-  // Function to handle print and database insertion
+ 
   const handlePrint = () => {
     const billData = {
       items: items,
@@ -154,15 +154,7 @@ export default function AddItems() {
                   </tr>
                 </table>
               </div>
-              {showPlaceOrder && ( 
-                <button className="oder" onClick={handlePlaceOrder} disabled={items.length === 0}>
-                  Place Order
-                </button>
-              )}
-              
-              {showAmountBalance && (
-                <>
-                  <div className="AllItemTotal">
+              <div className="AllItemTotal">
                     <div className="itemTotal">
                       <div className="addItem-container">
                         <table>
@@ -179,7 +171,15 @@ export default function AddItems() {
                       </div>
                     </div>
                   </div>
-
+              {showPlaceOrder && ( 
+                <button className="oder" onClick={handlePlaceOrder} disabled={items.length === 0}>
+                  Place Order
+                </button>
+              )}
+              <div></div>
+              {showAmountBalance && (
+                <>
+            
                   <div className="AllItemTotal">
                     <div className="itemTotal">
                       <div className="addItem-container">
@@ -248,10 +248,10 @@ export default function AddItems() {
               </tr>
               <tr>
                 <td colSpan={'3'} className="totalAmount">
-                  <span>Total Amount</span>
+                  <h4><span>Total Amount</span></h4>
                 </td>
-                <td>
-                  <span>Rs.&nbsp;{calculateTotal().toFixed(2)}</span>
+                <td className="totalprice">
+                <h4><span>Rs.&nbsp;{calculateTotal().toFixed(2)}</span></h4>
                 </td>
               </tr>
               <tr>

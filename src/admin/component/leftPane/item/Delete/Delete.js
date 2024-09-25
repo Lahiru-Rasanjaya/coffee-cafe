@@ -54,9 +54,12 @@ export default function Delete() {
           <a href='./AdminHome' className="closebutton">x</a>
         </div>
         <div className="Update-containers">
-          <span className="topics">DELETE ITEM</span>
           <div className='DeleteItemDetails'>
-            {image ? ( <img src={image} alt={name} /> ) : (<p>No Image Available</p> )}
+            <div className="deleteItemImage">
+                {image ? ( <img src={image} alt={name} /> ) : (<p>No Image Available</p> )}
+            </div>
+            <div className="Delete-item-Details">
+            <span className="topics">DELETE ITEM</span>
             <hr />
             <div className="namePrice">
                <h3>{name}</h3>
@@ -72,6 +75,7 @@ export default function Delete() {
             <button onClick={handleDeleteConfirm} className='deleteButton' disabled={!isChecked}>
               Confirm Delete
             </button>
+            </div>
           </div>
         </div>
       </div>
