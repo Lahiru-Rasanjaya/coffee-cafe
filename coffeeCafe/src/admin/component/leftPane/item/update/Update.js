@@ -41,9 +41,6 @@ export default function Update() {
         const result = response.data;
         if (result.success) {
           alert('Item Updated successfully');
-          setName('');
-          setPrice('');
-          setId('');
           window.location.href = `/AdminHome`;
         } else {
           alert('Update Error: ' + (result.error || 'Unknown error'));

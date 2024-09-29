@@ -7,7 +7,6 @@ const db = mysql.createConnection({
   database: "cofeecafe",
 });
 
-// Connect to the database
 db.connect((error) => {
   if (error) {
     console.error("DB Connection Failed: ", error);

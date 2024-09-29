@@ -9,18 +9,19 @@ export default function Item() {
 
   useEffect(() => {
     axios
-      .get("http://localhost/egaleeyesstore/getItems.php")
-      .then((response) => {
-        if (Array.isArray(response.data)) {
-          setItems(response.data);
-        } else {
-          setItems([]);
-        }
-      })
-      .catch((error) => {
-        console.error("Error fetching items:", error);
-      });
-  }, []);
+    .get("http://localhost:5000/cashier/items")
+    .then((response) => {
+      console.log(response.data); 
+      if (Array.isArray(response.data)) {
+        setItems(response.data); 
+      } else {
+        setItems([]);
+      }
+    })
+    .catch((error) => {
+      console.error("Error fetching items:", error);
+    });
+}, []);
 
   const handleEdit = (item) => {
     const { itemName, itemPrice, id, itemImage } = item;

@@ -13,7 +13,7 @@ export default function Sales() {
 
   const fetchSalesData = useCallback(() => {
     setLoading(true);
-    setError(null); // Reset error before fetching
+    setError(null); 
 
     let query = `http://localhost:5000/sales/salesData`;
     const params = new URLSearchParams();
@@ -42,12 +42,12 @@ export default function Sales() {
           item_quantity: Number(sale.item_quantity),
         }));
         setSalesData(formattedData);
-        setLoading(false); // Stop loading
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error fetching sales data:", error);
         setError("Failed to load sales data.");
-        setLoading(false); // Stop loading on error
+        setLoading(false); 
       });
   }, [itemName, month, year, day]);
 

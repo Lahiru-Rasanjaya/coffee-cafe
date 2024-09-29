@@ -4,13 +4,11 @@ const db = require("../../database");
 
 router.post('/updateItem', (req, res) => {
     const { id, price } = req.body;
-  
-    // Check if id and price are provided
+ 
     if (!id || !price) {
       return res.json({ success: false, error: 'ID and price must be provided' });
     }
   
-    // MySQL query to update the item's price
     const sql = `UPDATE item SET itemPrice = ? WHERE id = ?`;
     
     db.query(sql, [price, id], (err, result) => {

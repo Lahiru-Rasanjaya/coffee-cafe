@@ -28,12 +28,12 @@ app.use("/admin", adminItemDelete);
 //sales Report
 app.use('/sales',salesReport);
 
-
 app.post("*", (req, res) => {
   console.log("Route error: Invalid POST request");
   res.status(404).json({ success: false, message: "Invalid route" });
 });
 
+console.log(process.env.PORT);
 const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
