@@ -7,6 +7,7 @@ export default function Update() {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [id, setId] = useState('');
+  const [isLoading, setIsLoading] = useState(false); // State to handle loading
 
   const location = useLocation();
   
@@ -14,33 +15,48 @@ export default function Update() {
     const queryParams = new URLSearchParams(location.search);
     const itemName = queryParams.get('name');
     const itemPrice = queryParams.get('price');
-    const itemId = queryParams.get('id'); // Get the item ID from the query parameters
+    const itemId = queryParams.get('id');
 
     if (itemName) setName(itemName);
     if (itemPrice) setPrice(itemPrice);
-    if (itemId) setId(itemId); // Set the ID
+    if (itemId) setId(itemId);
   }, [location.search]);
 
   const itemAdd = (e) => {
     e.preventDefault(); 
-    let fData = new FormData();
-    fData.append('id', id);
-    fData.append('price', price);
 
-    axios.post('http://localhost/egaleeyesstore/update.php', fData)
+    if (!id || !price) {
+      alert('ID and Price must be filled out.');
+      return;
+    }
+
+    setIsLoading(true);
+    const data = {
+      id: id,
+      price: price,
+    };
+
+    axios.post('http://localhost:5000/admin/updateItem', data)
       .then((response) => {
         const result = response.data;
         if (result.success) {
           alert('Item Updated successfully');
+          setName('');
+          setPrice('');
+          setId('');
           window.location.href = `/AdminHome`;
         } else {
-          alert('Update Error');
+          alert('Update Error: ' + (result.error || 'Unknown error'));
         }
       })
       .catch(error => {
         alert('Error occurred: ' + error.message);
+      })
+      .finally(() => {
+        setIsLoading(false);
       });
   };
+
 
   return (
     <div className="backImage">
@@ -69,7 +85,7 @@ export default function Update() {
               </td>
             </tr>
           </table>
-          <div className="addItems">
+          <div className="addItems" disabled={isLoading}>
             <button onClick={itemAdd}>Add</button>
           </div>
         </div>

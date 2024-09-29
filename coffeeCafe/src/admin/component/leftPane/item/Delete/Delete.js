@@ -18,7 +18,6 @@ export default function Delete() {
 
     if (itemName) setName(decodeURIComponent(itemName));
     if (itemPrice) setPrice(itemPrice);
-
     
     if (itemImage) {
       const decodedImage = decodeURIComponent(itemImage);
@@ -28,25 +27,28 @@ export default function Delete() {
         console.error('Image format not recognized');
       }
     }
-
   }, [location.search]);
 
   const handleDeleteConfirm = () => {
+    if (!isChecked) {
+      alert('Please confirm the deletion by checking the box.');
+      return;
+    }
+
     const itemId = new URLSearchParams(location.search).get('id');
-    axios.post('http://localhost/egaleeyesstore/Delete.php', { id: itemId })
+    axios.post('http://localhost:5000/admin/deleteItem', { id: itemId })
       .then(response => {
         if (response.data.success) {
           alert('Item deleted successfully');
           window.location.href = '/AdminHome'; 
         } else {
-          alert('Error deleting item');
+          alert('Error deleting item: ' + response.data.error || 'Unknown error');
         }
       })
       .catch(error => {
         alert('Error occurred: ' + error.message);
       });
   };
-
   return (
     <div className="DeleteImage">
       <div className="mainUpdate">

@@ -9,7 +9,7 @@ export default function AddItem() {
     const [image, setImage] = useState(null);
 
 
-    const url = 'http://localhost/egaleeyesstore/itemAdd.php';
+    const url = 'http://localhost:5000/admin/upload';
     const itemAdd = (e) => {
         e.preventDefault(); 
         let fData = new FormData();
@@ -26,13 +26,12 @@ export default function AddItem() {
               window.location.href = `/AdminHome`;
   
             } else {
-                // setErrorMessage('Invalid email/password');
                alert('Item Add Error');
 
             }
           })
           .catch(error => {
-            alert('Error occurred: ' + error.message);
+            alert('Please fill the form correctly');
           });
       };
 

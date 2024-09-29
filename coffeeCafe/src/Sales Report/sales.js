@@ -8,9 +8,14 @@ export default function Sales() {
   const [year, setYear] = useState("");
   const [day, setDay] = useState("");
   const [salesData, setSalesData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const fetchSalesData = useCallback(() => {
-    let query = `http://localhost/egaleeyesstore/Billinsert/salesReport.php`;
+    setLoading(true);
+    setError(null); // Reset error before fetching
+
+    let query = `http://localhost:5000/sales/salesData`;
     const params = new URLSearchParams();
 
     if (itemName) {
@@ -37,9 +42,12 @@ export default function Sales() {
           item_quantity: Number(sale.item_quantity),
         }));
         setSalesData(formattedData);
+        setLoading(false); // Stop loading
       })
       .catch((error) => {
         console.error("Error fetching sales data:", error);
+        setError("Failed to load sales data.");
+        setLoading(false); // Stop loading on error
       });
   }, [itemName, month, year, day]);
 
@@ -54,6 +62,7 @@ export default function Sales() {
       </div>
       <div className="Salescontainer">
         <h1 className="sales-header">Sales Report</h1>
+
         <form
           onSubmit={(e) => {
             e.preventDefault();
@@ -71,30 +80,33 @@ export default function Sales() {
                 onChange={(e) => setItemName(e.target.value)}
               />
             </div>
+
             <div className="itemDate enterDetails">
               <h3 className="item-label">Enter Year:</h3>
               <input
-                type="text"
+                type="number"
                 className="input-text"
                 placeholder="(e.g., 2024)"
                 value={year}
                 onChange={(e) => setYear(e.target.value)}
               />
             </div>
+
             <div className="itemDate enterDetails">
               <h3 className="item-label">Enter Month:</h3>
               <input
-                type="text"
+                type="number"
                 className="input-text"
                 placeholder="(e.g., 09)"
                 value={month}
                 onChange={(e) => setMonth(e.target.value)}
               />
             </div>
+
             <div className="itemDate enterDetails">
               <h3 className="item-label">Enter Day:</h3>
               <input
-                type="text"
+                type="number"
                 className="input-text"
                 placeholder="(e.g., 08)"
                 value={day}
@@ -102,6 +114,7 @@ export default function Sales() {
               />
             </div>
           </div>
+
           <div className="searchButton">
             <button
               type="button"
@@ -112,6 +125,10 @@ export default function Sales() {
             </button>
           </div>
         </form>
+
+        {loading && <div className="loading">Loading...</div>}
+        {error && <div className="error-message">{error}</div>}
+
         <table className="sales-table">
           <thead className="table-header">
             <tr>
@@ -130,15 +147,18 @@ export default function Sales() {
                   <td>{sale.item_price.toFixed(2)}</td>
                   <td>{sale.item_quantity}</td>
                   <td>{(sale.item_quantity * sale.item_price).toFixed(2)}</td>
-                  <td>{new Date(sale.created_at).toLocaleDateString()}</td>
+                  <td>{new Date(sale.created_at).toLocaleDateString("en-GB")}</td>
                 </tr>
               ))
             ) : (
-              <tr>
-                <td colSpan="5">No sales data found.</td>
-              </tr>
+              !loading && (
+                <tr>
+                  <td colSpan="5">No sales data found.</td>
+                </tr>
+              )
             )}
           </tbody>
+
           {salesData.length > 0 && (
             <tfoot className="table-footer">
               <tr>
